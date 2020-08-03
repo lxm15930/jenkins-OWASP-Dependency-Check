@@ -8,7 +8,7 @@ pipeline {
 			//dependencyCheckAnalyzer datadir: '', hintsFile: '', includeCsvReports: false, includeHtmlReports: true, includeJsonReports: false, includeVulnReports: true, isAutoupdateDisabled: false, outdir: '', scanpath: '', skipOnScmChange: false, skipOnUpstreamChange: false, suppressionFile: '', zipExtensions: ''
 			//有高级别组件漏洞时，fail掉pipeline
 			//dependencyCheckPublisher canComputeNew: false, defaultEncoding: '', failedTotalHigh: '0', healthy: '', pattern: '', unHealthy: ''
-			dependencyCheck additionalArguments: '--HTML', odcInstallation: 'Dependency-Check 5.3.2'
+			dependencyCheck additionalArguments: '--format HTML', odcInstallation: 'Dependency-Check 5.3.2'
 			dependencyCheckPublisher pattern: 'dependency-check-report.xml'
 			}
 		}
