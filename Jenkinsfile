@@ -7,7 +7,7 @@ pipeline {
 			}
 		}
 		
-		stage('依赖安全检查') {
+		stage('dependency check') {
 		steps{
 			bat "mvn dependency-check:check"
 			}
