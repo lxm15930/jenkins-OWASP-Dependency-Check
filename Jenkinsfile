@@ -9,7 +9,7 @@ pipeline {
 			//有高级别组件漏洞时，fail掉pipeline
 			//dependencyCheckPublisher canComputeNew: false, defaultEncoding: '', failedTotalHigh: '0', healthy: '', pattern: '', unHealthy: ''
 			dependencyCheck additionalArguments: '--format XML', odcInstallation: 'Dependency-Check 5.3.2'
-			dependencyCheckPublisher pattern: 'dependency-check-report.xml'
+			dependencyCheckPublisher pattern: 'dependency-check-report.xml',canComputeNew: false
 			}
 		}
 	}
