@@ -9,7 +9,7 @@ pipeline {
 		
 		stage('dependency check') {
 		steps{
-			bat "mvn dependency-check:check -DodcInstallation: 'Dependency-Check 5.3.2'"
+			bat "mvn dependency-check:check"
 			}
 		}
 	}

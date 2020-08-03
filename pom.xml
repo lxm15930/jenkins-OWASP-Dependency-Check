@@ -28,7 +28,8 @@
         <artifactId>dependency-check-maven</artifactId>
         <version>4.0.2</version>
         <configuration>
-            <autoUpdate>true</autoUpdate>
+             <cveUrlModified>http://internal-mirror.mycorp.com/nvdcve-1.0-modified.json.gz</cveUrlModified>
+			 <cveUrlBase>http://internal-mirror.mycorp.com/nvdcve-1.0-%d.json.gz</cveUrlBase>	
         </configuration>
         <executions>
             <execution>
