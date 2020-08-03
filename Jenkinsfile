@@ -1,15 +1,10 @@
 pipeline {
     agent any
 	stages {
-		stage('code build') {
+		stage('依赖安全检查') {
 		steps{
-			bat "mvn clean compile"
-			}
-		}
-		
-		stage('dependency check') {
-		steps{
-			bat "mvn dependency-check:check"
+			dependencyCheck additionalArguments: '--format XML', odcInstallation: 'Dependency-Check 5.3.2'
+			dependencyCheckPublisher pattern: 'dependency-check-report.xml'
 			}
 		}
 	}
